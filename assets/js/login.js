@@ -40,7 +40,7 @@ $(".regiBox form").on("submit",function(e){
     e.preventDefault()
     let data =$(this).serialize()
 
-    axios.post('http://api-breakingnews-web.itheima.net/api/reguser',data).then(function(res){
+    axios.post('/api/reguser',data).then(function(res){
         // console.log(res);
         if(res.data.status!==0){
             layer.msg(res.data.message)
@@ -56,8 +56,8 @@ $(".loginBox form").on("submit",function(e){
     e.preventDefault()
     let data =$(this).serialize()
 
-    axios.post('http://api-breakingnews-web.itheima.net/api/login',data).then(function(res){
-        console.log(res);
+    axios.post('/api/login',data).then(function(res){
+        // console.log(res);
         if(res.data.status!==0){
             layer.msg(res.data.message)
         }
