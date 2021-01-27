@@ -23,7 +23,7 @@ function avatar(res){
     let name =res.data.nickname || res.data.username
     // console.log(name);
 
-    $('#welcome').text('欢迎'+name)
+    $('#welcome').text('欢迎 '+name)
     
     if(res.data.user_pic){
         $('.layui-nav-img').attr('src',res.data.user_pic).show()
